@@ -1,12 +1,12 @@
 #Requires -Version 5.1
 BeforeAll {
-    $modulePath = Resolve-Path (Join-Path $PSScriptRoot '..\ActiveNetAPI.psd1')
+    $modulePath = Resolve-Path (Join-Path $PSScriptRoot '..\ActiveNetAPI\ActiveNetAPI.psd1')
     Import-Module $modulePath -Force
 }
 
 Describe 'ActiveNetAPI Module v2.0.0 Manifest & Export Tests' {
     It 'Preserves the exact PowerShell Gallery GUID and exports version 2.0.0' {
-        $manifestPath = Resolve-Path (Join-Path $PSScriptRoot '..\ActiveNetAPI.psd1')
+        $manifestPath = Resolve-Path (Join-Path $PSScriptRoot '..\ActiveNetAPI\ActiveNetAPI.psd1')
         $manifest = Test-ModuleManifest -Path $manifestPath -ErrorAction Stop
         
         $manifest.Guid.ToString() | Should -Be 'ebe28e05-8dc6-4175-86d0-97b761d4bdb0'
