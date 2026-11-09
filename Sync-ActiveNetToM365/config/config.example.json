@@ -1,0 +1,28 @@
+{
+  "tenantId": "00000000-0000-0000-0000-000000000000",
+  "clientId": "11111111-1111-1111-1111-111111111111",
+  "certThumbprint": "0123456789ABCDEF0123456789ABCDEF01234567",
+  "mailbox": "roommailbox@example.com",
+  "activeNetOrgId": "your-org-id",
+  "activeNetBaseUrl": "https://api.amp.active.com",
+  "activeNetCredPath": "../config/activenet_creds.clixml",
+  "centerName": "Community Center Complex",
+  "facilityName": "Conference Room A",
+  "facilityId": 100,
+  "centerId": 10,
+  "notificationRecipients": [
+    "admin@example.com"
+  ],
+  "notificationSender": "roommailbox@example.com",
+  "errorRecipient": "admin@example.com",
+  "timeZone": "Central Standard Time",
+  "nonScopedTestMailbox": "nonscoped@example.com",
+  "stateFilePath": "state/sync_state.json",
+  "logDirectory": "logs",
+  "lockFilePath": "state/sync.lock",
+  "futureDaysWindow": 365,
+  "dryRunDaysWindow": 30,
+  "chunkDays": 90,
+  "logRetentionDays": 90,
+  "circuitBreakerMaxDeletesPct": 99
+}

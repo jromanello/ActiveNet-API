@@ -1,0 +1,35 @@
+{
+  "schemaVersion": "1.0.0",
+  "lastRunId": "9f32b17a-5bca-4b71-a4b5-92790d56b021",
+  "lastSuccessfulRunTimestamp": "2026-10-23T02:00:10Z",
+  "facilityId": 100,
+  "facilityName": "Conference Room A",
+  "records": {
+    "PERMIT_9000360_2026-11-15T09:30:00": {
+      "sourceScheduleId": "PERMIT_9000360_2026-11-15T09:30:00",
+      "graphEventId": "AAMkADQzYTM2ZTBjLTA5ZjEtNGI3Ni05MjM1LTA1...",
+      "syncFingerprint": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+      "effectiveStart": "2026-11-15T09:30:00-06:00",
+      "effectiveEnd": "2026-11-15T12:00:00-06:00",
+      "sourceStatus": "Approved",
+      "lastSynchronizedUtc": "2026-10-23T02:00:08Z",
+      "activeConflict": null
+    },
+    "ACT_9548_2026-11-16T18:00:00": {
+      "sourceScheduleId": "ACT_9548_2026-11-16T18:00:00",
+      "graphEventId": "AAMkADQzYTM2ZTBjLTA5ZjEtNGI3Ni05MjM1LTA2...",
+      "syncFingerprint": "9f86d081884c7d659a2feaa0c55ad015a3bf4f1b2b0b822cd15d6c15b0f00a08",
+      "effectiveStart": "2026-11-16T17:30:00-06:00",
+      "effectiveEnd": "2026-11-16T20:30:00-06:00",
+      "sourceStatus": "Open",
+      "lastSynchronizedUtc": "2026-10-23T02:00:09Z",
+      "activeConflict": {
+        "conflictKey": "d8578edf8458ce06fbc5bb76a58c5ca4",
+        "outlookEventId": "AAMkAGUyODExMzIzLWE4NDIt...",
+        "outlookOrganizerEmail": "organizer@example.com",
+        "firstDetectedUtc": "2026-10-23T02:00:09Z",
+        "lastNotifiedUtc": "2026-10-23T02:00:09Z"
+      }
+    }
+  }
+}

@@ -1,0 +1,80 @@
+{
+  "$schema": "http://json-schema.org/draft-07/schema#",
+  "title": "ActiveNetSyncConfig",
+  "type": "object",
+  "required": [
+    "appVersion",
+    "activeNet",
+    "microsoft365",
+    "paths",
+    "operationalSettings"
+  ],
+  "properties": {
+    "appVersion": { "type": "string" },
+    "activeNet": {
+      "type": "object",
+      "required": [
+        "organizationId",
+        "apiHost",
+        "isCanada",
+        "credentialPath",
+        "targetCenterName",
+        "targetFacilityName",
+        "targetFacilityId"
+      ],
+      "properties": {
+        "organizationId": { "type": "string" },
+        "apiHost": { "type": "string" },
+        "isCanada": { "type": "boolean" },
+        "credentialPath": { "type": "string" },
+        "targetCenterName": { "type": "string" },
+        "targetCenterId": { "type": ["integer", "null"] },
+        "targetFacilityName": { "type": "string" },
+        "targetFacilityId": { "type": "integer" }
+      }
+    },
+    "microsoft365": {
+      "type": "object",
+      "required": [
+        "tenantId",
+        "clientId",
+        "certificateThumbprint",
+        "roomMailbox",
+        "timeZone"
+      ],
+      "properties": {
+        "tenantId": { "type": "string" },
+        "clientId": { "type": "string" },
+        "certificateThumbprint": { "type": "string" },
+        "roomMailbox": { "type": "string" },
+        "timeZone": { "type": "string" }
+      }
+    },
+    "paths": {
+      "type": "object",
+      "required": ["stateFilePath", "logDirectory", "lockFilePath"],
+      "properties": {
+        "stateFilePath": { "type": "string" },
+        "logDirectory": { "type": "string" },
+        "lockFilePath": { "type": "string" }
+      }
+    },
+    "operationalSettings": {
+      "type": "object",
+      "required": [
+        "futureDaysWindow",
+        "dryRunDaysWindow",
+        "chunkDays",
+        "logRetentionDays",
+        "circuitBreakerMaxDeletesPct"
+      ],
+      "properties": {
+        "futureDaysWindow": { "type": "integer", "minimum": 1 },
+        "dryRunDaysWindow": { "type": "integer", "default": 30 },
+        "chunkDays": { "type": "integer", "default": 90 },
+        "logRetentionDays": { "type": "integer", "default": 90 },
+        "circuitBreakerMaxDeletesPct": { "type": "integer", "default": 50 }
+      }
+    }
+  }
+}

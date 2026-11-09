@@ -1,0 +1,66 @@
+{
+  "$schema": "http://json-schema.org/draft-07/schema#",
+  "title": "ActiveNetSyncStateSchema",
+  "type": "object",
+  "required": [
+    "schemaVersion",
+    "lastRunId",
+    "lastSuccessfulRunTimestamp",
+    "facilityId",
+    "facilityName",
+    "records"
+  ],
+  "properties": {
+    "schemaVersion": {
+      "type": "string",
+      "enum": ["1.0.0"]
+    },
+    "lastRunId": {
+      "type": "string"
+    },
+    "lastSuccessfulRunTimestamp": {
+      "type": "string",
+      "format": "date-time"
+    },
+    "facilityId": {
+      "type": "integer"
+    },
+    "facilityName": {
+      "type": "string"
+    },
+    "records": {
+      "type": "object",
+      "additionalProperties": {
+        "type": "object",
+        "required": [
+          "sourceScheduleId",
+          "graphEventId",
+          "syncFingerprint",
+          "effectiveStart",
+          "effectiveEnd",
+          "sourceStatus",
+          "lastSynchronizedUtc"
+        ],
+        "properties": {
+          "sourceScheduleId": { "type": "string" },
+          "graphEventId": { "type": "string" },
+          "syncFingerprint": { "type": "string" },
+          "effectiveStart": { "type": "string", "format": "date-time" },
+          "effectiveEnd": { "type": "string", "format": "date-time" },
+          "sourceStatus": { "type": "string" },
+          "lastSynchronizedUtc": { "type": "string", "format": "date-time" },
+          "activeConflict": {
+            "type": ["object", "null"],
+            "properties": {
+              "conflictKey": { "type": "string" },
+              "outlookEventId": { "type": "string" },
+              "outlookOrganizerEmail": { "type": "string" },
+              "firstDetectedUtc": { "type": "string", "format": "date-time" },
+              "lastNotifiedUtc": { "type": ["string", "null"], "format": "date-time" }
+            }
+          }
+        }
+      }
+    }
+  }
+}
